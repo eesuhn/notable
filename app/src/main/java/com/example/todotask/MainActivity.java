@@ -11,7 +11,6 @@ import android.view.ContextThemeWrapper;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.PopupMenu;
-import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -41,7 +40,9 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
                 if (menuItem.getTitle() == getString(R.string.aboutUs)){
-                    Toast.makeText(MainActivity.this, "Working in Progress..", Toast.LENGTH_SHORT).show(); //about us
+                    //about us
+                    Intent intent = new Intent(getApplicationContext(), AboutUs.class);
+                    startActivity(intent);
                 }
                 return true;
             });
