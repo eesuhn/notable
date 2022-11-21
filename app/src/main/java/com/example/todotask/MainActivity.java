@@ -2,12 +2,12 @@ package com.example.todotask;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.ContextThemeWrapper;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.PopupMenu;
@@ -50,12 +50,7 @@ public class MainActivity extends AppCompatActivity {
         //Menu
         //new task
         FloatingActionButton newTask = findViewById(R.id.newTask);
-        newTask.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, NoteEditor.class));
-            }
-        });
+        newTask.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, NoteEditor.class)));
         //New task
         ListView listView = findViewById(R.id.listView);
 
@@ -75,6 +70,30 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), NoteEditor.class);
             intent.putExtra("noteID", i);
             startActivity(intent);
+        });
+
+        listView.setOnItemLongClickListener((adapterView, view, i, l) -> {
+            final int toDelete = i;
+
+            new AlertDialog.Builder(MainActivity.this)
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setTitle(getString(R.string.youSure))
+                    .setMessage(getString(R.string.sureMessage))
+                    .setPositiveButton("Yes",
+                            (dialogInterface, i1) -> {
+                                task.remove(toDelete);
+                                arrayAdapter.notifyDataSetChanged();
+
+                                SharedPreferences sharedPreferences1 =
+                                        getApplicationContext().getSharedPreferences(".todotask", Context.MODE_PRIVATE);
+
+                                HashSet<String> set1 = new HashSet<>(MainActivity.task);
+
+                                sharedPreferences1.edit().putStringSet("task", set1). apply();
+                            })
+                    .setNegativeButton("No", null)
+                    .show();
+            return true;
         });
     }
 }
