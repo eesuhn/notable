@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="popupMenu" parent="Widget.AppCompat.PopupMenu">
+        <item name="listPreferredItemHeightSmall">10dp</item>
+    </style>
+</resources>
