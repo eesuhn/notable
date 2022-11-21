@@ -6,6 +6,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +24,17 @@ public class NoteEditor extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.note_editor);
         Objects.requireNonNull(getSupportActionBar()).hide();
+
+        //save
+        Button save = findViewById(R.id.saveTask);
+
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(NoteEditor.this, MainActivity.class));
+            }
+        });
+        //Save
 
         EditText editText = findViewById(R.id.editTask);
 

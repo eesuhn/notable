@@ -8,4 +8,5 @@
     <string name="hint">Insert Here..</string>
     <string name="menu">Menu</string>
     <string name="aboutUs">About Us</string>
+    <string name="start">Click here to start your first task</string>
 </resources>

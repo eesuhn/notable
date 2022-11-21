@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.ContextThemeWrapper;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.PopupMenu;
@@ -47,6 +48,15 @@ public class MainActivity extends AppCompatActivity {
             popupMenu.show();
         });
         //Menu
+        //new task
+        FloatingActionButton newTask = findViewById(R.id.newTask);
+        newTask.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, NoteEditor.class));
+            }
+        });
+        //New task
         ListView listView = findViewById(R.id.listView);
 
         SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences(".todotask", Context.MODE_PRIVATE);
@@ -54,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         HashSet<String> set = (HashSet<String>) sharedPreferences.getStringSet("task", null);
 
         if (set == null){
-            task.add(getString(R.string.newTask));
+            task.add(getString(R.string.start));
         }else{
             task = new ArrayList<>(set);
         }
