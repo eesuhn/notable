@@ -1,6 +1,7 @@
 ## To-Do List 
-An Android-based mobile application which allows <br>
-the user to record day-to-day tasks. 
+An Android-based mobile application that allows <br>
+the user to record day-to-day tasks <br>
+with the use of `SharedPreferences`
 - Create a new task with the button below 
 - Edit the task by clicking on the existing task 
 - Delete the task by long-pressing 
