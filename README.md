@@ -1,11 +1,20 @@
-## To-Do List 
-An Android-based mobile application that allows <br>
-the user to record day-to-day tasks <br>
-with the use of `SharedPreferences`
-- Create a new task with the button below 
-- Edit the task by clicking on the existing task 
-- Delete the task by long-pressing 
+## Note-Taking App
+A note-taking app that utilizes `SharedPreferences` allows the user to record notes. 
+- Create a note with a button/ drop-down menu
+- Delete a note by long pressing
+- Edit note 
 
-<img src="https://user-images.githubusercontent.com/102596628/204752629-b76e5837-ac83-44b2-b62d-db2714e03336.png" alt="Screenshot1" width="300" />
+<img src="https://user-images.githubusercontent.com/102596628/215802621-b45608fb-7fe2-41ff-af54-d00421040993.png" alt="Screenshot1" width="300" />
 
 *Figure 1: Screenshot of `activity_main.xml`*
+
+<img src="https://user-images.githubusercontent.com/102596628/215802810-6d4c33ed-003b-4e0e-8e59-fb3d596c72fb.png" alt="Screenshot2" width="300" />
+
+*Figure 2: Screenshot of creating note*
+
+-----
+### Setting Up... with Android Studio
+
+1. Launch the terminal in `AndroidStudioProjects` folder, which is located in the `Users` directory
+2. Run the following command to clone the repository <br>
+`git clone https://github.com/eesuhn/WordGuessingGame.git`
