@@ -10,7 +10,7 @@ A note-taking app that utilizes `SharedPreferences` allows the user to record no
 
 <img src="https://user-images.githubusercontent.com/102596628/215802810-6d4c33ed-003b-4e0e-8e59-fb3d596c72fb.png" alt="Screenshot2" width="300" />
 
-*Figure 2: Screenshot of creating note*
+*Figure 2: Screenshot of note editing*
 
 -----
 ### Setting Up... with Android Studio
