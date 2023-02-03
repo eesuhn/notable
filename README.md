@@ -1,5 +1,5 @@
 ## Note-Taking App
-A note-taking app that utilizes `SharedPreferences` allows the user to record notes. 
+A note-taking app that utilizes `SharedPreferences` allows the user to record notes
 - Create a note with a button/ drop-down menu
 - Delete a note by long pressing
 - Edit note 
