@@ -1,4 +1,4 @@
-## Note-Taking App
+## Notable
 - Create note with button/ drop-down menu
 - Edit note
 - Delete note by long pressing
